@@ -5,7 +5,10 @@ import pickle as pkl
 #import matplotlib.pyplot as plt
 #from sklearn import datasets
 #from sklearn.model_selection import train_test_split
+
+pip install pathlib
 from pathlib import path
+
 
 #from sklearn.decomposition import PCA
 #from sklearn.svm import SVC
