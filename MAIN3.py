@@ -21,8 +21,7 @@ classifier_name = st.sidebar.selectbox(
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
 
-modellgbm = pkl.load(open(url(r'model.pkl', 'rb') )
-                     
+modellgbm = pkl.load(open(url(r'model.pkl', 'rb') )                     
 fo = st.text_input('date_evaluation')
 fhi = st.text_input('adresse code voie')
 flo = st.text_input('adresse code postal')
