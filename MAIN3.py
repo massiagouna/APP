@@ -24,8 +24,8 @@ classifier_name = st.sidebar.selectbox(
 ########################
 
 
-fhi = st.text_input('code de la commune')
-flo = st.text_input('code de la commune')
+#fhi = st.text_input('code de la commune')
+#flo = st.text_input('code de la commune')
 Jitter_percent = st.text_input('nom de la commune')
 Jitter_Abs = st.text_input('code de la commune')
 RAP = st.text_input('type du local')
