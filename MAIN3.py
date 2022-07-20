@@ -6,7 +6,7 @@ import pickle as pkl
 #from sklearn import datasets
 #from sklearn.model_selection import train_test_split
 
-pip install pathlib
+!pip install pathlib
 from pathlib import path
 
 
