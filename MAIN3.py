@@ -22,8 +22,6 @@ classifier_name = st.sidebar.selectbox(
 )
 
 modellgbm = pkl.load(open(r'github.com/massiagouna/APP/blob/main/model.pkl','rd' )
-
-#col1, col2, col3, col4, col5 = st.columns(5)
                      
 fo = st.text_input('date_evaluation')
 fhi = st.text_input('adresse code voie')
