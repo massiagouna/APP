@@ -20,6 +20,8 @@ classifier_name = st.sidebar.selectbox(
     'Select classifier',
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
+
+########################
 fhi = st.text_input('adresse code voie')
 flo = st.text_input('adresse code postal')
 Jitter_percent = st.text_input('nom de la commune')
