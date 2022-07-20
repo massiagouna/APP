@@ -49,15 +49,16 @@ modellgbm = pkl.load(open(url(r'model.pkl', 'rb'))
 
 
 
-if classifier_name == 'RandomForestRegressor':
-    st.title('PREDICTION DES PRIX AVEC RANDOM')
-    if st.button("cliquez pour voir le prix"):
-        prediction_random = modellgbm.predict(
-            [[ fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
-               APQ3, APQ5,Shimmer]])
-        st.success(prediction_random)
+if classifier_name == 'RandomForestRegressor' :
+                     
+                    st.title('PREDICTION DES PRIX AVEC RANDOM')
+                    if st.button("cliquez pour voir le prix"):
+                        prediction_random = modellgbm.predict(
+                            [[ fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+                               APQ3, APQ5,Shimmer]])
+                        st.success(prediction_random)
 
-elif classifier_name == 'LGBMRegressor':
+elif classifier_name == 'LGBMRegressor' :
     st.title('PREDICTION DES PRIX AVEC LGBM')
     if st.button("cliquez pour voir le prix"):
         prediction_random = modellgbm.predict(
