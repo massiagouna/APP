@@ -6,15 +6,11 @@ import pickle as pkl
 #from sklearn import datasets
 #from sklearn.model_selection import train_test_split
 
-!pip install pathlib
-from pathlib import path
-
-
 #from sklearn.decomposition import PCA
 #from sklearn.svm import SVC
 #from sklearn.neighbors import KNeighborsClassifier
 #from sklearn.ensemble import RandomForestClassifier
-import pickle
+
 #from sklearn.metrics import accuracy_score
 
 
@@ -25,9 +21,9 @@ classifier_name = st.sidebar.selectbox(
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
 
-modellgbm =path(__file__).parent[1]/'github.com/massiagouna/APP/blob/main/model.pkl'
+modellgbm = pkl.load(open(r"model.pkl", 'rb') )
 
-                     
+#col1, col2, col3, col4, col5 = st.columns(5)
 fo = st.text_input('date_evaluation')
 fhi = st.text_input('adresse code voie')
 flo = st.text_input('adresse code postal')
@@ -57,19 +53,19 @@ if classifier_name == 'RandomForestRegressor':
 elif classifier_name == 'LGBMRegressor':
     st.title('PREDICTION DES PRIX AVEC LGBM')
     if st.button("cliquez pour voir le prix"):
-        prediction_lgbm =modellgbm.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer,
-              Shimmer_dB, APQ3, APQ5,Shimmer]])
-        st.success(prediction_lgbm)
+        prediction_random = modellgbm.predict(
+            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+               APQ3, APQ5,Shimmer]])
+        st.success(prediction_random)
 
 
 else:
     st.title('PREDICTION DES PRIX AVEC XGBOOST')
     if st.button("cliquez pour voir le prix"):
-        prediction_xgbr = modellgbm.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer,
-              Shimmer_dB, APQ3, APQ5,Shimmer]])
-        st.success(prediction_xgbr)
+        prediction_random = modellgbm.predict(
+            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+               APQ3, APQ5,Shimmer]])
+        st.success(prediction_random)
 
 
 
