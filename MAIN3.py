@@ -10,7 +10,7 @@ import pickle as pkl
 #from sklearn.svm import SVC
 #from sklearn.neighbors import KNeighborsClassifier
 #from sklearn.ensemble import RandomForestClassifier
-
+import pickle
 #from sklearn.metrics import accuracy_score
 
 
@@ -21,7 +21,7 @@ classifier_name = st.sidebar.selectbox(
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
 url="https://github.com/massiagouna/APP/blob/main/model.pkl"
-modellgbm = pickle.load(open(r"url", "rb"))
+modellgbm = pd.read_pickle(url)
 
                      
 fo = st.text_input('date_evaluation')
