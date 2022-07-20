@@ -21,7 +21,7 @@ classifier_name = st.sidebar.selectbox(
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
 url="https://drive.google.com/file/d/1exCHFDzPyKThrf_C1UxSSsbk16mHRARr/view?usp=sharing"
-modellgbm = pickle.load(open(url, "rb"))
+modellgbm = pickle.load(open(r"url", "rb"))
 
                      
 fo = st.text_input('date_evaluation')
