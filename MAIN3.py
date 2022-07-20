@@ -20,7 +20,7 @@ classifier_name = st.sidebar.selectbox(
     'Select classifier',
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
-url="https://drive.google.com/file/d/1exCHFDzPyKThrf_C1UxSSsbk16mHRARr/view?usp=sharing"
+url="https://github.com/massiagouna/APP/blob/main/model.pkl"
 modellgbm = pickle.load(open(r"url", "rb"))
 
                      
