@@ -5,6 +5,7 @@ import pickle as pkl
 #import matplotlib.pyplot as plt
 #from sklearn import datasets
 #from sklearn.model_selection import train_test_split
+from pathlib import path
 
 #from sklearn.decomposition import PCA
 #from sklearn.svm import SVC
@@ -20,8 +21,8 @@ classifier_name = st.sidebar.selectbox(
     'Select classifier',
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
-url="https://github.com/massiagouna/APP/blob/main/model.pkl"
-modellgbm = pd.read_pickle(url)
+
+modellgbm =path(__file__).parent[1]/'github.com/massiagouna/APP/blob/main/model.pkl'
 
                      
 fo = st.text_input('date_evaluation')
