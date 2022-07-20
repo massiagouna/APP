@@ -21,7 +21,7 @@ classifier_name = st.sidebar.selectbox(
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
 
-modellgbm = pkl.load(open(r"model.pkl", 'rb') )
+modellgbm = pkl.load(open(url(r'model.pkl', 'rb') )
 
 #col1, col2, col3, col4, col5 = st.columns(5)
 fo = st.text_input('date_evaluation')
