@@ -22,8 +22,10 @@ classifier_name = st.sidebar.selectbox(
 )
 
 ########################
-fhi = st.text_input('adresse code voie')
-flo = st.text_input('adresse code postal')
+
+
+fhi = st.text_input('code de la commune')
+flo = st.text_input('code de la commune')
 Jitter_percent = st.text_input('nom de la commune')
 Jitter_Abs = st.text_input('code de la commune')
 RAP = st.text_input('type du local')
@@ -43,23 +45,6 @@ Shimmer = st.text_input('nombre de piece')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 modellgbm = pkl.load(open(url(r'model.pkl', 'rb'))                     
 
 
@@ -68,7 +53,7 @@ if classifier_name == 'RandomForestRegressor':
     st.title('PREDICTION DES PRIX AVEC RANDOM')
     if st.button("cliquez pour voir le prix"):
         prediction_random = modellgbm.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+            [[ fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
                APQ3, APQ5,Shimmer]])
         st.success(prediction_random)
 
@@ -76,7 +61,7 @@ elif classifier_name == 'LGBMRegressor':
     st.title('PREDICTION DES PRIX AVEC LGBM')
     if st.button("cliquez pour voir le prix"):
         prediction_random = modellgbm.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+            [[fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
                APQ3, APQ5,Shimmer]])
         st.success(prediction_random)
 
@@ -85,7 +70,7 @@ else:
     st.title('PREDICTION DES PRIX AVEC XGBOOST')
     if st.button("cliquez pour voir le prix"):
         prediction_random = modellgbm.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
+            [[fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer_dB,
                APQ3, APQ5,Shimmer]])
         st.success(prediction_random)
 
