@@ -20,9 +20,6 @@ classifier_name = st.sidebar.selectbox(
     'Select classifier',
     ('RandomForestRegressor', 'LGBMRegressor', 'XGBRegressor')
 )
-
-modellgbm = pkl.load(open(url(r'model.pkl', 'rb') )                     
-
 fhi = st.text_input('adresse code voie')
 flo = st.text_input('adresse code postal')
 Jitter_percent = st.text_input('nom de la commune')
@@ -39,6 +36,31 @@ APQ5 = st.text_input('le département')
 
 
 Shimmer = st.text_input('nombre de piece')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+modellgbm = pkl.load(open(url(r'model.pkl', 'rb'))                     
+
+
 
 if classifier_name == 'RandomForestRegressor':
     st.title('PREDICTION DES PRIX AVEC RANDOM')
